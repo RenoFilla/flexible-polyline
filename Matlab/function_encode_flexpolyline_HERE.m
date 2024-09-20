@@ -7,7 +7,7 @@
 %                              'Precision_3rd_dim': set precision of 3rd dimension, default is 1
 % Output: polyline (string)
 % ------------------------------------------------------------------------------------------------------------
-% Reno Filla, NEPP, Scania R&D, created 2021-11-13, last updated 2021-11-13
+% Reno Filla, NEPP, Scania R&D, created 2021-11-13, last updated 2022-05-05
 % ------------------------------------------------------------------------------------------------------------
 
 
@@ -27,10 +27,10 @@ function poly = function_encode_flexpolyline_HERE (LatLonData, varargin)
     validationFcnContent = @(x) validateattributes(x,'string','scalartext');
     
     addRequired(p,'LatLonData',@isnumeric);
-    addOptional(p,'Precision',defaultPrecision,validationFcnPrecision);    
-    addOptional(p,'Flag_3rd_dim',defaultFlag_3rd_dim,validationFcnFlag);    
-    addOptional(p,'Content_3rd_dim',defaultContent_3rd_dim);    
-    addOptional(p,'Precision_3rd_dim',defaultPrecision_3rd_dim,validationFcnPrecision);    
+    addParameter(p,'Precision',defaultPrecision,validationFcnPrecision);    
+    addParameter(p,'Flag_3rd_dim',defaultFlag_3rd_dim,validationFcnFlag);    
+    addParameter(p,'Content_3rd_dim',defaultContent_3rd_dim);    
+    addParameter(p,'Precision_3rd_dim',defaultPrecision_3rd_dim,validationFcnPrecision);    
 
     p.KeepUnmatched = true;
     p.CaseSensitive = false;
